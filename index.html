@@ -10,17 +10,19 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="style.css?v=1.0">
+	<link rel="stylesheet" href="style.css?v=1.1">
 </head>
 <body>
 	<header class="header" id="top">
 		<nav class="topbar" aria-label="Page navigation">
+			<a href="#demos">Demos</a>
 			<a href="#abstract">Abstract</a>
-			<a href="#data">Data</a>
 			<a href="#method">Method</a>
-			<a href="#release">Release</a>
+			<a href="#results">Results</a>
+			<a href="#paper">Paper</a>
 		</nav>
-		<div class="venue">CoRL 2026 Submission</div>
+
+		<p class="venue">CoRL 2026 Submission</p>
 		<h1>TACT X: Learning Shared Tactile Representations Across Diverse Sensors</h1>
 		<div class="authors">
 			<span>Anonymous Authors</span>
@@ -30,66 +32,75 @@
 			A shared tactile latent aligns vision-based, magnetic, and resistive sensors, enabling tactile-conditioned manipulation policies to transfer zero-shot across physically different hardware.
 		</p>
 		<div class="links">
-			<a class="btn" href="TACTX_Learning%20Shared%20Tactile%20Representations%20Across%20Diverse%20Sensor.pdf"><i class="fa fa-file-pdf-o"></i><span>Paper</span></a>
-			<a class="btn btn-disabled" href="#" aria-disabled="true"><i class="fa fa-link"></i><span>OpenReview</span></a>
-			<a class="btn btn-disabled" href="#" aria-disabled="true"><i class="fa fa-github"></i><span>Code</span></a>
-			<a class="btn btn-disabled" href="#" aria-disabled="true"><i class="fa fa-database"></i><span>Dataset</span></a>
+			<a class="btn" href="TACTX.pdf"><i class="fa fa-file-pdf-o"></i><span>Paper</span></a>
+			<span class="btn btn-disabled" aria-disabled="true"><i class="fa fa-link"></i><span>OpenReview</span></span>
+			<span class="btn btn-disabled" aria-disabled="true"><i class="fa fa-github"></i><span>Code</span></span>
+			<span class="btn btn-disabled" aria-disabled="true"><i class="fa fa-database"></i><span>Dataset</span></span>
 		</div>
-		<div class="hero-figure">
-			<img src="images/hero-tactx.png" alt="TACT X aligns tactile sensors in a shared latent space and supports zero-shot policy transfer.">
+
+		<div class="hero-video">
+			<video autoplay loop muted playsinline preload="metadata">
+				<source src="videos/three_sensor.mov" type="video/quicktime">
+			</video>
+			<div class="hero-label">Daimon, eFlesh, and FlexiTac in one shared tactile space</div>
 		</div>
 	</header>
 
 	<main class="content">
-		<section class="section" id="tasks">
+		<section class="section" id="demos">
 			<div class="section-heading">
-				<p class="eyebrow">Task Videos</p>
-				<h2>Cross-Sensor Manipulation Tasks</h2>
+				<p class="eyebrow">Robot Demos</p>
+				<h2>Zero-Shot Cross-Sensor Policy Transfer</h2>
 			</div>
-			<div class="task-grid">
-				<!-- Replace source with videos/tasks/pick-and-place.mp4 when ready. -->
+			<div class="demo-grid">
 				<article class="video-card">
-					<video autoplay loop muted playsinline preload="metadata" poster="images/task-pick-place.png">
-						<source src="videos/tasks/pick-and-place.mp4" type="video/mp4">
+					<video autoplay loop muted playsinline preload="metadata">
+						<source src="videos/zero_shot_pnp.MOV" type="video/quicktime">
 					</video>
 					<div class="video-caption">
 						<span>Pick-and-place</span>
-						<small>video slot</small>
+						<small>zero-shot</small>
 					</div>
 				</article>
-				<!-- Replace source with videos/tasks/plug-insertion.mp4 when ready. -->
 				<article class="video-card">
-					<video autoplay loop muted playsinline preload="metadata" poster="images/task-plug-insertion.png">
-						<source src="videos/tasks/plug-insertion.mp4" type="video/mp4">
+					<video autoplay loop muted playsinline preload="metadata">
+						<source src="videos/zero_shot_pnp_ood.MOV" type="video/quicktime">
+					</video>
+					<div class="video-caption">
+						<span>Pick-and-place OOD</span>
+						<small>color shift</small>
+					</div>
+				</article>
+				<article class="video-card">
+					<video autoplay loop muted playsinline preload="metadata">
+						<source src="videos/zero_shot_plug.MOV" type="video/quicktime">
 					</video>
 					<div class="video-caption">
 						<span>Plug insertion</span>
-						<small>video slot</small>
+						<small>contact-rich</small>
 					</div>
 				</article>
-				<!-- Replace source with videos/tasks/board-wiping.mp4 when ready. -->
 				<article class="video-card">
-					<video autoplay loop muted playsinline preload="metadata" poster="images/task-board-wiping.png">
-						<source src="videos/tasks/board-wiping.mp4" type="video/mp4">
+					<video autoplay loop muted playsinline preload="metadata">
+						<source src="videos/zero_shot_board.MOV" type="video/quicktime">
 					</video>
 					<div class="video-caption">
 						<span>Board wiping</span>
-						<small>video slot</small>
+						<small>sliding contact</small>
 					</div>
 				</article>
-				<!-- Replace source with videos/tasks/object-reorientation.mp4 when ready. -->
 				<article class="video-card">
-					<video autoplay loop muted playsinline preload="metadata" poster="images/task-object-reorientation.png">
-						<source src="videos/tasks/object-reorientation.mp4" type="video/mp4">
+					<video autoplay loop muted playsinline preload="metadata">
+						<source src="videos/zero_shot_object.MOV" type="video/quicktime">
 					</video>
 					<div class="video-caption">
 						<span>Object reorientation</span>
-						<small>video slot</small>
+						<small>tactile control</small>
 					</div>
 				</article>
 			</div>
 			<p class="lead">
-				TACT X is evaluated on contact-rich manipulation tasks where tactile feedback matters: precise placement, insertion under contact, surface wiping, and object reorientation.
+				TACT X is evaluated on four contact-rich manipulation tasks, with an additional out-of-distribution pick-and-place setting that changes object color while preserving geometry.
 			</p>
 		</section>
 
@@ -101,13 +112,13 @@
 				<h2>Sensor-Agnostic Touch</h2>
 			</div>
 			<p class="abstract">
-				Tactile sensors provide critical information for contact-rich manipulation, yet tactile representations and policies remain tightly coupled to each specific sensor, limiting transferability across robots and hardware platforms. We propose TACT X, a framework for learning a transferable tactile representation across sensors spanning three fundamentally different transduction modalities: resistive, magnetic, and vision-based. TACT X maps heterogeneous tactile observations into a shared latent space through modality-specific encoders trained on paired contact data. Such paired interactions provide a natural alignment signal across modalities, and the encoders are jointly trained across all sensor pairs, inducing a three-way-consistent latent space. Our experiments show that TACT X aligns tactile representations across sensors while preserving object-level contact information through sensor prediction and object classification on the learned latent space. We evaluate TACT X on four contact-rich manipulation tasks: pick-and-place, plug insertion, board wiping, and object reorientation. Policies trained with one sensor transfer zero-shot to physically distinct sensors through the shared latent, yielding approximately 20% higher success than vision-only transfer baselines.
+				Tactile sensors provide critical information for contact-rich manipulation, yet tactile representations and policies remain tightly coupled to each specific sensor, limiting transferability across robots and hardware platforms. We propose TACT X, a framework for learning a transferable tactile representation across sensors spanning three fundamentally different transduction modalities: resistive, magnetic, and vision-based. TACT X maps heterogeneous tactile observations into a shared latent space through modality-specific encoders trained on paired contact data. Such paired interactions provide a natural alignment signal across modalities, and the encoders are jointly trained across all sensor pairs, inducing a consistent latent space for all sensor types. Across multiple manipulation tasks, TACT X improves average zero-shot cross-sensor policy success from 27.5% for vision-only transfer to 45.9%.
 			</p>
 			<div class="stats">
 				<div class="stat"><strong>3</strong><span>sensor modalities</span></div>
 				<div class="stat"><strong>16-D</strong><span>shared latent</span></div>
-				<div class="stat"><strong>4</strong><span>robot tasks</span></div>
-				<div class="stat"><strong>&sim;20%</strong><span>transfer gain</span></div>
+				<div class="stat"><strong>45.9%</strong><span>TACT X transfer</span></div>
+				<div class="stat"><strong>+18.4</strong><span>points over vision</span></div>
 			</div>
 		</section>
 
@@ -121,33 +132,31 @@
 			<div class="split">
 				<div>
 					<p>
-						TACT X trains from simultaneous paired contact observations. Two tactile sensors are mounted on opposing fingers of a parallel-jaw gripper and record the same physical contact event through different sensing mechanisms. Pairwise datasets are collected for Daimon, eFlesh, and FlexiTac, with left/right sensor swaps to reduce mounting bias.
+						TACT X trains from simultaneous paired contact observations. Two tactile sensors are mounted on opposing fingers of a parallel-jaw gripper and record the same physical contact event through different sensing mechanisms.
 					</p>
 					<p>
-						The pretraining set uses 10 3D-printed objects spanning point, edge, and area contacts. Scripted approach, contact, stable-grasp, release, and withdraw phases produce aligned tactile frames for all sensor pairs.
+						Pairwise datasets connect Daimon, eFlesh, and FlexiTac. Left/right sensor swaps reduce mounting bias, and 10 3D-printed objects provide point, edge, and area contact geometries for alignment.
 					</p>
-					<div class="sensor-grid">
-						<figure>
-							<img src="images/sensor-daimon.png" alt="Daimon vision-based tactile sensor.">
-							<figcaption>Daimon<br><span>vision-based</span></figcaption>
-						</figure>
-						<figure>
-							<img src="images/sensor-eflesh.png" alt="eFlesh magnetic tactile sensor.">
-							<figcaption>eFlesh<br><span>magnetic</span></figcaption>
-						</figure>
-						<figure>
-							<img src="images/sensor-flexitac.png" alt="FlexiTac resistive tactile sensor.">
-							<figcaption>FlexiTac<br><span>resistive</span></figcaption>
-						</figure>
+					<div class="sensor-chips" aria-label="Tactile sensors">
+						<span><strong>Daimon</strong> vision-based</span>
+						<span><strong>eFlesh</strong> magnetic</span>
+						<span><strong>FlexiTac</strong> resistive</span>
 					</div>
 				</div>
-				<aside class="media-panel">
-					<!-- Replace source with videos/sections/data-collection.mp4 when ready. -->
-					<video autoplay loop muted playsinline preload="metadata" poster="images/pretraining-objects.png">
-						<source src="videos/sections/data-collection.mp4" type="video/mp4">
-					</video>
-					<div class="media-label">Automated data collection video slot</div>
-				</aside>
+				<div class="media-stack">
+					<article class="media-panel">
+						<video autoplay loop muted playsinline preload="metadata">
+							<source src="videos/data_collection_plane.MOV" type="video/quicktime">
+						</video>
+						<div class="media-label">Plane contact collection</div>
+					</article>
+					<article class="media-panel">
+						<video autoplay loop muted playsinline preload="metadata">
+							<source src="videos/data_collection_sphere.MOV" type="video/quicktime">
+						</video>
+						<div class="media-label">Sphere contact collection</div>
+					</article>
+				</div>
 			</div>
 		</section>
 
@@ -161,53 +170,79 @@
 			<div class="split method-split">
 				<div>
 					<p>
-						Each sensor has its own encoder and decoder. Encoders map native tactile observations into a shared posterior over a 16-D latent space; decoders reconstruct each modality from that latent. During training, paired observations are pulled together with an InfoNCE alignment loss while self- and cross-reconstruction preserve contact geometry.
+						Each sensor has its own encoder and decoder. Encoders map native tactile observations into a shared posterior over a 16-D latent space, while decoders reconstruct each modality from that latent.
 					</p>
 					<p>
-						Because each trajectory contains only two sensors at a time, minibatches draw balanced samples from every pair-dataset. The result is a globally consistent tactile space induced from pairwise supervision alone.
+						TACT X combines contrastive alignment with self- and cross-reconstruction. Minibatches draw balanced samples from every sensor-pair dataset, inducing a globally consistent tactile space from pairwise supervision alone.
 					</p>
 					<div class="method-points">
 						<div><strong>Align</strong><span>paired contacts from different sensors</span></div>
-						<div><strong>Preserve</strong><span>contact structure via self- and cross-reconstruction</span></div>
+						<div><strong>Preserve</strong><span>object- and contact-level structure</span></div>
 						<div><strong>Transfer</strong><span>ACT policies through the shared tactile interface</span></div>
 					</div>
 				</div>
-				<aside class="media-panel">
-					<!-- Replace source with videos/sections/tactx-architecture.mp4 when ready. -->
-					<video autoplay loop muted playsinline preload="metadata" poster="images/method-overview.png">
-						<source src="videos/sections/tactx-architecture.mp4" type="video/mp4">
-					</video>
-					<div class="media-label">Architecture animation slot</div>
-				</aside>
+				<div class="media-stack">
+					<article class="media-panel">
+						<video autoplay loop muted playsinline preload="metadata">
+							<source src="videos/architecture.MOV" type="video/quicktime">
+						</video>
+						<div class="media-label">TACT X architecture</div>
+					</article>
+					<article class="media-panel">
+						<video autoplay loop muted playsinline preload="metadata">
+							<source src="videos/architecture_forward_pass.MOV" type="video/quicktime">
+						</video>
+						<div class="media-label">Cross-sensor forward pass</div>
+					</article>
+				</div>
 			</div>
-			<figure class="wide-figure">
-				<img src="images/alignment-results.png" alt="TACT X alignment results showing sensor invariance and semantic preservation.">
-				<figcaption>TACT X mixes heterogeneous sensor domains while preserving object-level tactile information for downstream manipulation.</figcaption>
-			</figure>
+		</section>
+
+		<div class="hr"></div>
+
+		<section class="section" id="results">
+			<div class="section-heading">
+				<p class="eyebrow">Results</p>
+				<h2>Shared Touch Improves Transfer</h2>
+			</div>
+			<div class="result-grid">
+				<article class="result-card">
+					<strong>45.9%</strong>
+					<span>average TACT X cross-sensor success rate</span>
+				</article>
+				<article class="result-card">
+					<strong>27.5%</strong>
+					<span>average vision-only transfer success rate</span>
+				</article>
+				<article class="result-card">
+					<strong>0</strong>
+					<span>new policy demonstrations required at deployment</span>
+				</article>
+			</div>
+			<p class="lead">
+				TACT X achieves the strongest transfer on most task and sensor-pair combinations. The largest gains appear in contact-rich settings such as board wiping and object reorientation, where contact geometry matters beyond binary touch.
+			</p>
 		</section>
 
 		<div class="hr"></div>
 
 		<section class="section" id="release">
 			<div class="section-heading">
-				<p class="eyebrow">Open Release</p>
-				<h2>100% Open</h2>
+				<p class="eyebrow">Release</p>
+				<h2>Open Resources</h2>
 			</div>
-			<p class="lead">
-				To support further research on sensor-agnostic tactile learning and cross-sensor manipulation, we release the following:
-			</p>
 			<div class="cards">
 				<article class="card">
-					<h3>TACT X Dataset</h3>
-					<p>Paired contact data across Daimon, eFlesh, and FlexiTac, collected with 10 objects and left/right-swapped sensor-pair configurations.</p>
+					<h3>Dataset</h3>
+					<p>Paired contact data across Daimon, eFlesh, and FlexiTac with left/right-swapped sensor-pair configurations.</p>
 				</article>
 				<article class="card">
 					<h3>Code</h3>
 					<p>Training and evaluation code for shared tactile representation learning, reconstruction, alignment, and ACT policy transfer.</p>
 				</article>
 				<article class="card">
-					<h3>Model Checkpoints</h3>
-					<p>Pretrained TACT X encoders and decoders, plus checkpoints for tactile-conditioned manipulation experiments.</p>
+					<h3>Checkpoints</h3>
+					<p>TACT X encoder and decoder checkpoints, plus downstream tactile-conditioned policy checkpoints.</p>
 				</article>
 			</div>
 		</section>
@@ -226,14 +261,16 @@
 				16 pages
 			</p>
 			<div class="thumbnails" aria-label="Paper page thumbnails">
-				<a href="TACTX_Learning%20Shared%20Tactile%20Representations%20Across%20Diverse%20Sensor.pdf"><img src="thumbnails/page-01.png" alt="Paper page 1 thumbnail."></a>
-				<a href="TACTX_Learning%20Shared%20Tactile%20Representations%20Across%20Diverse%20Sensor.pdf"><img src="thumbnails/page-02.png" alt="Paper page 2 thumbnail."></a>
-				<a href="TACTX_Learning%20Shared%20Tactile%20Representations%20Across%20Diverse%20Sensor.pdf"><img src="thumbnails/page-03.png" alt="Paper page 3 thumbnail."></a>
-				<a href="TACTX_Learning%20Shared%20Tactile%20Representations%20Across%20Diverse%20Sensor.pdf"><img src="thumbnails/page-04.png" alt="Paper page 4 thumbnail."></a>
-				<a href="TACTX_Learning%20Shared%20Tactile%20Representations%20Across%20Diverse%20Sensor.pdf"><img src="thumbnails/page-05.png" alt="Paper page 5 thumbnail."></a>
-				<a href="TACTX_Learning%20Shared%20Tactile%20Representations%20Across%20Diverse%20Sensor.pdf"><img src="thumbnails/page-06.png" alt="Paper page 6 thumbnail."></a>
+				<a href="TACTX.pdf"><img src="thumbnails/page-01.png" alt="Paper page 1 thumbnail."></a>
+				<a href="TACTX.pdf"><img src="thumbnails/page-02.png" alt="Paper page 2 thumbnail."></a>
+				<a href="TACTX.pdf"><img src="thumbnails/page-03.png" alt="Paper page 3 thumbnail."></a>
+				<a href="TACTX.pdf"><img src="thumbnails/page-04.png" alt="Paper page 4 thumbnail."></a>
+				<a href="TACTX.pdf"><img src="thumbnails/page-05.png" alt="Paper page 5 thumbnail."></a>
+				<a href="TACTX.pdf"><img src="thumbnails/page-06.png" alt="Paper page 6 thumbnail."></a>
+				<a href="TACTX.pdf"><img src="thumbnails/page-07.png" alt="Paper page 7 thumbnail."></a>
+				<a href="TACTX.pdf"><img src="thumbnails/page-08.png" alt="Paper page 8 thumbnail."></a>
 			</div>
-			<a class="text-link" href="TACTX_Learning%20Shared%20Tactile%20Representations%20Across%20Diverse%20Sensor.pdf">View paper PDF</a>
+			<a class="text-link" href="TACTX.pdf">View paper PDF</a>
 		</section>
 
 		<div class="hr"></div>
