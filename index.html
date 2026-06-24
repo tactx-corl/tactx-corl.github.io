@@ -14,11 +14,12 @@
 <body>
 	<header class="header" id="top">
 		<nav class="topbar" aria-label="Page navigation">
-			<a href="#demos">Demos</a>
 			<a href="#abstract">Abstract</a>
+			<a href="#data">Data Collection</a>
 			<a href="#method">Method</a>
+			<a href="#demos">Zero-Shot Transfer</a>
 			<a href="#results">Results</a>
-			<a href="#paper">Paper</a>
+			<a href="#release">Release</a>
 		</nav>
 
 		<p class="venue">CoRL 2026 Submission</p>
@@ -36,75 +37,9 @@
 			<span class="btn btn-disabled" aria-disabled="true"><span>Code</span></span>
 			<span class="btn btn-disabled" aria-disabled="true"><span>Dataset</span></span>
 		</div>
-
-		<div class="hero-video">
-			<video autoplay loop muted playsinline preload="metadata" poster="video-posters/three_sensor.jpg">
-				<source src="videos/three_sensor.mov" type="video/quicktime">
-			</video>
-			<div class="hero-label">Three sensing modalities, one shared latent</div>
-		</div>
 	</header>
 
 	<main class="content">
-		<section class="section" id="demos">
-			<div class="section-heading">
-				<p class="eyebrow">Robot Demos</p>
-				<h2>Zero-Shot Cross-Sensor Policy Transfer</h2>
-			</div>
-			<div class="demo-grid">
-				<article class="video-card">
-					<video autoplay loop muted playsinline preload="metadata" poster="video-posters/zero_shot_pnp.jpg">
-						<source src="videos/zero_shot_pnp.MOV" type="video/quicktime">
-					</video>
-					<div class="video-caption">
-						<span>Pick-and-place</span>
-						<small>zero-shot</small>
-					</div>
-				</article>
-				<article class="video-card">
-					<video autoplay loop muted playsinline preload="metadata" poster="video-posters/zero_shot_pnp_ood.jpg">
-						<source src="videos/zero_shot_pnp_ood.MOV" type="video/quicktime">
-					</video>
-					<div class="video-caption">
-						<span>Pick-and-place OOD</span>
-						<small>color shift</small>
-					</div>
-				</article>
-				<article class="video-card">
-					<video autoplay loop muted playsinline preload="metadata" poster="video-posters/zero_shot_plug.jpg">
-						<source src="videos/zero_shot_plug.MOV" type="video/quicktime">
-					</video>
-					<div class="video-caption">
-						<span>Plug insertion</span>
-						<small>contact-rich</small>
-					</div>
-				</article>
-				<article class="video-card">
-					<video autoplay loop muted playsinline preload="metadata" poster="video-posters/zero_shot_board.jpg">
-						<source src="videos/zero_shot_board.MOV" type="video/quicktime">
-					</video>
-					<div class="video-caption">
-						<span>Board wiping</span>
-						<small>sliding contact</small>
-					</div>
-				</article>
-				<article class="video-card">
-					<video autoplay loop muted playsinline preload="metadata" poster="video-posters/zero_shot_object.jpg">
-						<source src="videos/zero_shot_object.MOV" type="video/quicktime">
-					</video>
-					<div class="video-caption">
-						<span>Object reorientation</span>
-						<small>tactile control</small>
-					</div>
-				</article>
-			</div>
-			<p class="lead">
-				TACT X is evaluated on four contact-rich manipulation tasks, with an additional out-of-distribution pick-and-place setting that changes object color while preserving geometry.
-			</p>
-		</section>
-
-		<div class="hr"></div>
-
 		<section class="section" id="abstract">
 			<div class="section-heading">
 				<p class="eyebrow">Abstract</p>
@@ -144,16 +79,19 @@
 				</div>
 				<div class="media-stack">
 					<article class="media-panel">
-						<video autoplay loop muted playsinline preload="metadata" poster="video-posters/data_collection_plane.jpg">
-							<source src="videos/data_collection_plane.MOV" type="video/quicktime">
+						<video autoplay loop muted playsinline preload="auto" poster="video-posters/three_sensor.jpg">
+							<source src="videos/three_sensor.mov" type="video/quicktime">
 						</video>
-						<div class="media-label">Plane contact collection</div>
 					</article>
 					<article class="media-panel">
-						<video autoplay loop muted playsinline preload="metadata" poster="video-posters/data_collection_sphere.jpg">
+						<video autoplay loop muted playsinline preload="auto" poster="video-posters/data_collection_plane.jpg">
+							<source src="videos/data_collection_plane.MOV" type="video/quicktime">
+						</video>
+					</article>
+					<article class="media-panel">
+						<video autoplay loop muted playsinline preload="auto" poster="video-posters/data_collection_sphere.jpg">
 							<source src="videos/data_collection_sphere.MOV" type="video/quicktime">
 						</video>
-						<div class="media-label">Sphere contact collection</div>
 					</article>
 				</div>
 			</div>
@@ -182,19 +120,56 @@
 				</div>
 				<div class="media-stack">
 					<article class="media-panel">
-						<video autoplay loop muted playsinline preload="metadata" poster="video-posters/architecture.jpg">
+						<video autoplay loop muted playsinline preload="auto" poster="video-posters/architecture.jpg">
 							<source src="videos/architecture.MOV" type="video/quicktime">
 						</video>
-						<div class="media-label">TACT X architecture</div>
 					</article>
 					<article class="media-panel">
-						<video autoplay loop muted playsinline preload="metadata" poster="video-posters/architecture_forward_pass.jpg">
+						<video autoplay loop muted playsinline preload="auto" poster="video-posters/architecture_forward_pass.jpg">
 							<source src="videos/architecture_forward_pass.MOV" type="video/quicktime">
 						</video>
-						<div class="media-label">Cross-sensor forward pass</div>
 					</article>
 				</div>
 			</div>
+		</section>
+
+		<div class="hr"></div>
+
+		<section class="section" id="demos">
+			<div class="section-heading">
+				<p class="eyebrow">Zero-Shot Transfer</p>
+				<h2>Cross-Sensor Policy Transfer</h2>
+			</div>
+			<div class="demo-grid">
+				<article class="video-card">
+					<video autoplay loop muted playsinline preload="auto" poster="video-posters/zero_shot_pnp.jpg">
+						<source src="videos/zero_shot_pnp.MOV" type="video/quicktime">
+					</video>
+				</article>
+				<article class="video-card">
+					<video autoplay loop muted playsinline preload="auto" poster="video-posters/zero_shot_pnp_ood.jpg">
+						<source src="videos/zero_shot_pnp_ood.MOV" type="video/quicktime">
+					</video>
+				</article>
+				<article class="video-card">
+					<video autoplay loop muted playsinline preload="auto" poster="video-posters/zero_shot_plug.jpg">
+						<source src="videos/zero_shot_plug.MOV" type="video/quicktime">
+					</video>
+				</article>
+				<article class="video-card">
+					<video autoplay loop muted playsinline preload="auto" poster="video-posters/zero_shot_board.jpg">
+						<source src="videos/zero_shot_board.MOV" type="video/quicktime">
+					</video>
+				</article>
+				<article class="video-card">
+					<video autoplay loop muted playsinline preload="auto" poster="video-posters/zero_shot_object.jpg">
+						<source src="videos/zero_shot_object.MOV" type="video/quicktime">
+					</video>
+				</article>
+			</div>
+			<p class="lead">
+				TACT X is evaluated on four contact-rich manipulation tasks, with an additional out-of-distribution pick-and-place setting that changes object color while preserving geometry.
+			</p>
 		</section>
 
 		<div class="hr"></div>
@@ -293,5 +268,16 @@
 		<a href="#top"><span>Return to top</span></a>
 		<p>This website has been anonymized in compliance with CoRL 2026 submission guidelines.</p>
 	</footer>
+	<script>
+		document.querySelectorAll("video").forEach((video) => {
+			video.muted = true;
+			video.loop = true;
+			video.playsInline = true;
+			const play = video.play();
+			if (play) {
+				play.catch(() => {});
+			}
+		});
+	</script>
 </body>
 </html>
