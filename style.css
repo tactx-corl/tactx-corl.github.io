@@ -1,14 +1,14 @@
 :root {
-	--ink: #182027;
-	--muted: #5b6670;
-	--line: #dce3e8;
-	--paper: #ffffff;
-	--soft: #f5f8f7;
+	--ink: #2b2620;
+	--muted: #6b6253;
+	--line: #e2d8c2;
+	--paper: #f7f2e7;
+	--soft: #efe7d4;
 	--green: #1f8a68;
 	--blue: #2867b2;
 	--red: #b84a44;
 	--amber: #b47623;
-	--shadow: 0 18px 48px rgba(20, 32, 38, 0.12);
+	--shadow: 0 18px 48px rgba(43, 38, 32, 0.12);
 }
 
 * {
@@ -85,11 +85,19 @@ p {
 }
 
 h1 {
-	font-size: clamp(42px, 6vw, 76px);
+	font-size: clamp(36px, 5vw, 62px);
 	letter-spacing: 0;
-	line-height: 0.98;
+	line-height: 1.0;
 	margin: 14px auto 24px;
 	max-width: 1080px;
+}
+
+.brand {
+	white-space: nowrap;
+}
+
+.brand-mid {
+	font-size: 0.7em;
 }
 
 h2 {
@@ -121,7 +129,7 @@ h3 {
 }
 
 .subtitle {
-	color: #34404a;
+	color: #42392b;
 	font-size: 21px;
 	line-height: 1.52;
 	margin: 0 auto 28px;
@@ -157,9 +165,9 @@ h3 {
 }
 
 .btn-disabled {
-	background: #f2f4f5;
-	border-color: #d6dde2;
-	color: #7b858c;
+	background: #ece4d2;
+	border-color: #ddd2b9;
+	color: #8a8170;
 	cursor: default;
 }
 
@@ -217,14 +225,111 @@ h3 {
 }
 
 .lead {
-	color: #394650;
+	color: #473d2e;
 	font-size: 19px;
 	line-height: 1.65;
 	max-width: 880px;
 }
 
+.demo-stack {
+	display: grid;
+	gap: 16px;
+	grid-template-columns: 1fr;
+	margin-bottom: 22px;
+	max-width: 920px;
+}
+
+.demo-stack .video-card video {
+	aspect-ratio: 16 / 9;
+	object-fit: cover;
+	width: 100%;
+}
+
+.table-figure {
+	margin: 28px 0 0;
+}
+
+.table-figure figcaption {
+	color: var(--muted);
+	font-size: 14px;
+	line-height: 1.5;
+	margin-bottom: 14px;
+	max-width: 1020px;
+}
+
+.table-wrap {
+	-webkit-overflow-scrolling: touch;
+	border: 1px solid var(--line);
+	border-radius: 10px;
+	overflow-x: auto;
+}
+
+.results-table {
+	border-collapse: collapse;
+	font-size: 14px;
+	min-width: 720px;
+	width: 100%;
+}
+
+.results-table th,
+.results-table td {
+	padding: 8px 12px;
+	text-align: center;
+	white-space: nowrap;
+}
+
+.results-table thead th {
+	background: var(--soft);
+	border-bottom: 2px solid #cdbf9f;
+	color: var(--ink);
+	font-weight: 800;
+}
+
+.results-table tbody td {
+	border-bottom: 1px solid var(--line);
+}
+
+.results-table tbody tr.shade td {
+	background: rgba(43, 38, 32, 0.045);
+}
+
+.results-table .grp {
+	border-right: 1px solid var(--line);
+	font-weight: 700;
+	line-height: 1.25;
+	vertical-align: middle;
+}
+
+.results-table .grp-ours {
+	font-weight: 800;
+}
+
+.results-table .s-dai,
+.results-table .s-efl,
+.results-table .s-flx {
+	font-weight: 700;
+	vertical-align: middle;
+}
+
+.results-table .s-dai {
+	color: #2b6cb0;
+}
+
+.results-table .s-efl {
+	color: #c53030;
+}
+
+.results-table .s-flx {
+	color: #2f855a;
+}
+
+.results-table tbody td strong {
+	color: var(--ink);
+	font-weight: 800;
+}
+
 .abstract {
-	color: #2f3b44;
+	color: #3a3327;
 	font-size: 18px;
 	line-height: 1.76;
 	max-width: 1020px;
@@ -281,7 +386,7 @@ h3 {
 }
 
 .split p {
-	color: #34404a;
+	color: #42392b;
 }
 
 .sensor-chips {
@@ -320,6 +425,92 @@ h3 {
 	aspect-ratio: 16 / 9;
 	background: #101519;
 	object-fit: cover;
+	width: 100%;
+}
+
+.intro-section {
+	padding-top: 16px;
+	padding-bottom: 40px;
+}
+
+.intro-anim {
+	margin: 0 auto;
+	max-width: 1020px;
+}
+
+.latent-row {
+	align-items: stretch;
+	display: grid;
+	gap: 16px;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+	margin-top: 28px;
+}
+
+.latent-row .intro-anim {
+	margin: 0;
+	max-width: none;
+}
+
+.intro-anim img {
+	border: 1px solid var(--line);
+	border-radius: 12px;
+	box-shadow: var(--shadow);
+	width: 100%;
+}
+
+.data-intro,
+.method-intro {
+	margin-bottom: 22px;
+	max-width: 880px;
+}
+
+.anim-stack {
+	display: grid;
+	gap: 22px;
+	margin: 28px auto 0;
+	max-width: 1120px;
+}
+
+.method-anim {
+	margin: 0;
+}
+
+.method-anim img {
+	border: 1px solid var(--line);
+	border-radius: 12px;
+	box-shadow: var(--shadow);
+	width: 100%;
+}
+
+.method-figure img {
+	background: #f1ead9;
+	padding: 18px;
+}
+
+.objects-row {
+	display: grid;
+	gap: 14px;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+	margin-top: 14px;
+}
+
+.objects-panel {
+	background: #0e1215;
+	border: 1px solid #20282d;
+	border-radius: 8px;
+	margin: 0;
+	overflow: hidden;
+}
+
+.objects-panel img {
+	aspect-ratio: 16 / 9;
+	object-fit: contain;
+	width: 100%;
+}
+
+.objects-video video {
+	aspect-ratio: 16 / 9;
+	object-fit: contain;
 	width: 100%;
 }
 
@@ -530,7 +721,9 @@ footer p {
 	.demo-grid,
 	.stats,
 	.cards,
-	.result-grid {
+	.result-grid,
+	.objects-row,
+	.latent-row {
 		grid-template-columns: 1fr;
 	}
 
