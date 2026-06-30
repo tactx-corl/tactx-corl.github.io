@@ -44,7 +44,7 @@ video {
 }
 
 .header {
-	max-width: 1180px;
+	max-width: 1652px;
 	margin: 0 auto;
 	padding: 28px 24px 46px;
 	text-align: center;
@@ -89,7 +89,7 @@ h1 {
 	letter-spacing: 0;
 	line-height: 1.0;
 	margin: 14px auto 24px;
-	max-width: 1080px;
+	max-width: 1512px;
 }
 
 .brand {
@@ -133,7 +133,7 @@ h3 {
 	font-size: 21px;
 	line-height: 1.52;
 	margin: 0 auto 28px;
-	max-width: 900px;
+	max-width: 1260px;
 }
 
 .links {
@@ -173,7 +173,7 @@ h3 {
 
 .content {
 	margin: 0 auto;
-	max-width: 1180px;
+	max-width: 1652px;
 	padding: 0 24px 36px;
 }
 
@@ -183,7 +183,7 @@ h3 {
 
 .section-heading {
 	margin-bottom: 24px;
-	max-width: 820px;
+	max-width: 1148px;
 }
 
 .section-heading.center {
@@ -228,15 +228,15 @@ h3 {
 	color: #473d2e;
 	font-size: 19px;
 	line-height: 1.65;
-	max-width: 880px;
+	max-width: 1232px;
 }
 
 .demo-stack {
 	display: grid;
 	gap: 16px;
 	grid-template-columns: 1fr;
-	margin-bottom: 22px;
-	max-width: 920px;
+	margin: 0 auto 22px;
+	max-width: 1288px;
 }
 
 .demo-stack .video-card video {
@@ -254,7 +254,7 @@ h3 {
 	font-size: 14px;
 	line-height: 1.5;
 	margin-bottom: 14px;
-	max-width: 1020px;
+	max-width: 1428px;
 }
 
 .table-wrap {
@@ -332,7 +332,7 @@ h3 {
 	color: #3a3327;
 	font-size: 18px;
 	line-height: 1.76;
-	max-width: 1020px;
+	max-width: 1428px;
 }
 
 .stats,
@@ -435,7 +435,7 @@ h3 {
 
 .intro-anim {
 	margin: 0 auto;
-	max-width: 1020px;
+	max-width: 1428px;
 }
 
 .latent-row {
@@ -461,14 +461,14 @@ h3 {
 .data-intro,
 .method-intro {
 	margin-bottom: 22px;
-	max-width: 880px;
+	max-width: 1232px;
 }
 
 .anim-stack {
 	display: grid;
 	gap: 22px;
 	margin: 28px auto 0;
-	max-width: 1120px;
+	max-width: 1568px;
 }
 
 .method-anim {
@@ -605,7 +605,7 @@ h3 {
 	gap: 12px;
 	grid-template-columns: repeat(4, minmax(0, 1fr));
 	margin: 28px auto 24px;
-	max-width: 1040px;
+	max-width: 1456px;
 }
 
 .thumbnails a {
@@ -644,7 +644,7 @@ footer {
 	border-top: 1px solid var(--line);
 	color: var(--muted);
 	margin: 0 auto;
-	max-width: 1180px;
+	max-width: 1652px;
 	padding: 34px 24px 54px;
 	text-align: center;
 }

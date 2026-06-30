@@ -3,13 +3,13 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>TACT X: Learning Shared Tactile Representations Across Diverse Sensors</title>
-	<meta property="og:title" content="TACT X: Learning Shared Tactile Representations Across Diverse Sensors">
-	<meta property="og:description" content="TACT X learns shared tactile representations across vision-based, magnetic, and resistive sensors for zero-shot cross-sensor manipulation policy transfer.">
+	<title>TACTX: Learning Shared Tactile Representations Across Diverse Sensors</title>
+	<meta property="og:title" content="TACTX: Learning Shared Tactile Representations Across Diverse Sensors">
+	<meta property="og:description" content="TACTX learns shared tactile representations across vision-based, magnetic, and resistive sensors for zero-shot cross-sensor manipulation policy transfer.">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
-	<link rel="stylesheet" href="style.css?v=1.8">
+	<link rel="stylesheet" href="style.css?v=2.0">
 </head>
 <body>
 	<header class="header" id="top">
@@ -44,14 +44,14 @@
 				<h2>Sensor-Agnostic Touch</h2>
 			</div>
 			<p class="abstract">
-				Tactile sensors provide critical information for contact-rich manipulation, yet tactile representations and policies remain tightly coupled to each specific sensor, limiting transferability across robots and hardware platforms. We propose TACT X, a framework for learning a transferable tactile representation across sensors spanning three fundamentally different transduction modalities: resistive, magnetic, and vision-based. TACT X maps heterogeneous tactile observations into a shared latent space through modality-specific encoders trained on paired contact data. Such paired interactions provide a natural alignment signal across modalities, and the encoders are jointly trained across all sensor pairs, inducing a consistent latent space for all sensor types. Across multiple manipulation tasks, TACT X improves average zero-shot cross-sensor policy success from 27.5% for vision-only transfer to 45.9%.
+				Tactile sensors provide critical information for contact-rich manipulation, yet tactile representations and policies remain tightly coupled to each specific sensor, limiting transferability across robots and hardware platforms. We propose TACTX, a framework for learning a transferable tactile representation across sensors spanning three fundamentally different transduction modalities: resistive, magnetic, and vision-based. TACTX maps heterogeneous tactile observations into a shared latent space through modality-specific encoders trained on paired contact data. Such paired interactions provide a natural alignment signal across modalities, and the encoders are jointly trained across all sensor pairs, inducing a consistent latent space for all sensor types. Across multiple manipulation tasks, TACTX improves average zero-shot cross-sensor policy success from 27.5% for vision-only transfer to 45.9%.
 			</p>
 			<div class="latent-row">
 				<figure class="intro-anim">
-					<img src="animations/intro_shared.gif" alt="TACT X intro animation: a shared latent representation across three sensing modalities.">
+					<img src="animations/intro_shared.gif" alt="TACTX intro animation: a shared latent representation across three sensing modalities.">
 				</figure>
 				<figure class="intro-anim">
-					<img src="animations/latent_beige_crop.gif" alt="TACT X latent space animation: paired contacts aligning in the shared tactile latent space.">
+					<img src="animations/latent_beige_crop.gif" alt="TACTX latent space animation: paired contacts aligning in the shared tactile latent space.">
 				</figure>
 			</div>
 		</section>
@@ -64,7 +64,7 @@
 			</div>
 			<div class="data-intro">
 				<p>
-					TACT X trains from simultaneous paired contact observations. Two tactile sensors are mounted on opposing fingers of a parallel-jaw gripper and record the same physical contact event through different sensing mechanisms.
+					TACTX trains from simultaneous paired contact observations. Two tactile sensors are mounted on opposing fingers of a parallel-jaw gripper and record the same physical contact event through different sensing mechanisms.
 				</p>
 				<p>
 					Pairwise datasets connect Daimon, eFlesh, and FlexiTac. Left/right sensor swaps reduce mounting bias, and 10 3D-printed objects provide point, edge, and area contact geometries for alignment.
@@ -93,15 +93,15 @@
 					Each sensor has its own encoder and decoder. Encoders map native tactile observations into a shared posterior over a 16-D latent space, while decoders reconstruct each modality from that latent.
 				</p>
 				<p>
-					TACT X combines contrastive alignment with self- and cross-reconstruction. Minibatches draw balanced samples from every sensor-pair dataset, inducing a globally consistent tactile space from pairwise supervision alone.
+					TACTX combines contrastive alignment with self- and cross-reconstruction. Minibatches draw balanced samples from every sensor-pair dataset, inducing a globally consistent tactile space from pairwise supervision alone.
 				</p>
 			</div>
 			<div class="anim-stack">
 				<figure class="method-anim method-figure">
-					<img src="images/architecture.png" alt="TACT X architecture: modality-specific encoders and variational latent heads map each sensor into a shared latent space trained with InfoNCE, KL, and reconstruction losses.">
+					<img src="images/architecture.png" alt="TACTX architecture: modality-specific encoders and variational latent heads map each sensor into a shared latent space trained with InfoNCE, KL, and reconstruction losses.">
 				</figure>
 				<figure class="method-anim">
-					<img src="animations/architecture_beige_crop.gif" alt="TACT X architecture animation: forward pass for one paired contact through the shared latent space.">
+					<img src="animations/architecture_beige_crop.gif" alt="TACTX architecture animation: forward pass for one paired contact through the shared latent space.">
 				</figure>
 			</div>
 		</section>
@@ -113,7 +113,7 @@
 				<h2>Zero-Shot Cross-Sensor Policy Transfer</h2>
 			</div>
 			<p class="lead">
-				TACT X is evaluated on four contact-rich manipulation tasks, with an additional out-of-distribution pick-and-place setting that changes object color while preserving geometry.
+				TACTX is evaluated on four contact-rich manipulation tasks, with an additional out-of-distribution pick-and-place setting that changes object color while preserving geometry. Below, we show zero-shot transfer, training on one sensor and deploying on another, chosen randomly for each task.
 			</p>
 			<div class="demo-stack">
 				<article class="video-card">
@@ -153,7 +153,7 @@
 			<div class="result-grid">
 				<article class="result-card">
 					<strong>45.9%</strong>
-					<span>average TACT X cross-sensor success rate</span>
+					<span>average TACTX cross-sensor success rate</span>
 				</article>
 				<article class="result-card">
 					<strong>27.5%</strong>
@@ -165,7 +165,7 @@
 				</article>
 			</div>
 			<p class="lead">
-				TACT X achieves the strongest transfer on most task and sensor-pair combinations. The largest gains appear in contact-rich settings such as board wiping and object reorientation, where contact geometry matters beyond binary touch.
+				TACTX achieves the strongest transfer on most task and sensor-pair combinations. The largest gains appear in contact-rich settings such as board wiping and object reorientation, where contact geometry matters beyond binary touch.
 			</p>
 			<figure class="table-figure">
 				<figcaption><strong>Cross-sensor policy transfer across all tasks.</strong> Each entry reports the number of successes out of 10 trials, shown as mean &plusmn; std over 3 runs. <strong>Bold</strong> indicates the best performance for each source&ndash;deploy combination and task.</figcaption>
@@ -293,7 +293,7 @@
 				</article>
 				<article class="card">
 					<h3>Checkpoints</h3>
-					<p>TACT X encoder and decoder checkpoints, plus downstream tactile-conditioned policy checkpoints.</p>
+					<p>TACTX encoder and decoder checkpoints, plus downstream tactile-conditioned policy checkpoints.</p>
 				</article>
 			</div>
 		</section>
@@ -302,10 +302,10 @@
 
 		<section class="section paper-section" id="paper">
 			<div class="section-heading">
-				<h2>TACT X</h2>
+				<h2>TACTX</h2>
 			</div>
 			<p>
-				<strong>TACT X: Learning Shared Tactile Representations Across Diverse Sensors</strong><br>
+				<strong>TACTX: Learning Shared Tactile Representations Across Diverse Sensors</strong><br>
 				<span class="italic">Anonymous Authors</span><br>
 				CoRL 2026 Submission<br>
 				16 pages
@@ -331,7 +331,7 @@
 			</div>
 			<p>If you find our work useful, please consider citing the paper as follows:</p>
 			<pre class="bibtex" id="bibtex-text">@misc{Anonymous2026TACTX,
-  title={TACT X: Learning Shared Tactile Representations Across Diverse Sensors},
+  title={TACTX: Learning Shared Tactile Representations Across Diverse Sensors},
   author={Anonymous Authors},
   booktitle={Conference on Robot Learning (Submission)},
   year={2026}
